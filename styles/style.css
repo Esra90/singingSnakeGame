@@ -1,0 +1,13 @@
+body {
+    background-image: url("../images/musicnote4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#gameBoard {
+    margin-top: 110px;
+    margin-left: 390px;
+}
