@@ -83,7 +83,6 @@ function Snake() {
         this.total = 0;
         this.tail = [];
         gameOver = true;
-        music = new Music();
         music.clearMusic();
       }
     }

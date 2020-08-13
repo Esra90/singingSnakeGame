@@ -4,7 +4,8 @@ const scale = 25;
 const rows = cvs.height / scale;
 const columns = cvs.width / scale;
 let snake;
-var gameOver = false;
+var gameOver = true;
+var music = new Music();
 
 
 
@@ -12,27 +13,32 @@ var gameOver = false;
   // begins directly 
   snake = new Snake();
   fruit = new Fruit();
-  music = new Music();
+  
   fruit.pickLocation();
   
 
   window.setInterval(() => {
 
     if(!gameOver){
-    ctx.clearRect(0, 0, cvs.width, cvs.height);
-    fruit.draw();
-    snake.update();
-    snake.draw();
+      ctx.clearRect(0, 0, cvs.width, cvs.height);
+      fruit.draw();
+      snake.update();
+      snake.draw();
 
 
-    if (snake.eat(fruit)) {
-      fruit.pickLocation();
-      music.getRandomMusic(); 
-      music.playAudio();
-    }
+      if (snake.eat(fruit)) {
+        fruit.pickLocation();
+        music.getRandomMusic(); 
+        music.playAudio();
+      }
 
-    snake.checkCollision();
-    document.querySelector('.score').innerText = snake.total;
+      snake.checkCollision();
+      if(!gameOver){
+        document.querySelector('.score').innerText = snake.total;
+      }else{
+        document.querySelector('.score').innerText = 'GAME OVER';
+        
+      }
     }
    }, 250);
   
