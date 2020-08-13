@@ -5,10 +5,13 @@ const rows = cvs.height / scale;
 const columns = cvs.width / scale;
 let snake;
 
-(function setup() {
+
+function setup() {
   snake = new Snake();
   fruit = new Fruit();
+  music = new Music();
   fruit.pickLocation();
+  music.getRandomMusic ();
 
   window.setInterval(() => {
     ctx.clearRect(0, 0, cvs.width, cvs.height);
@@ -24,9 +27,15 @@ let snake;
     document.querySelector('.score').innerText = snake.total;
 
   }, 250);
-}());
+}
 
 window.addEventListener('keydown', ((evt) => {
   const direction = evt.key.replace('Arrow', '');
   snake.changeDirection(direction);
 }));
+ 
+//let the game start if you click on the start button 
+let button = document.getElementById('start-button');
+button.addEventListener('click', setup); 
+
+

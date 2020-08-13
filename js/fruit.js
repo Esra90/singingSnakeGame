@@ -2,6 +2,7 @@ function Fruit() {
   this.x;
   this.y;
 
+  //Get random location fot the next music note
   this.pickLocation = function() {
     this.x = (Math.floor(Math.random() *
       columns - 1) + 1) * scale;
@@ -9,8 +10,8 @@ function Fruit() {
       rows - 1) + 1) * scale;
   }
 
-  
 
+  // Draw the img of the food(music note)
   this.draw = function() {
     // ctx.fillStyle = "#4cafab";
     // ctx.fillRect(this.x, this.y, scale, scale)
@@ -18,4 +19,10 @@ function Fruit() {
     foodImg.src = './images/musicNote.png';    
     ctx.drawImage(foodImg, this.x, this.y, scale, scale);  
   }
+
+
+  // Collect the music notes 
+  // this.collectMusicNotes = function() {
+
+  // }
 }

@@ -17,8 +17,17 @@ body {
     margin-left: 420px;
 }
 
+#textpart  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:700px; 
+    margin: 0 auto;
+}
+
+
 .game-intro {
-    margin-left: 800px;
+    margin-left: 100px;
 }
 .game-intro h1 {
     font-size: 25px;
