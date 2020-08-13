@@ -20,9 +20,4 @@ function Fruit() {
     ctx.drawImage(foodImg, this.x, this.y, scale, scale);  
   }
 
-
-  // Collect the music notes 
-  // this.collectMusicNotes = function() {
-
-  // }
 }

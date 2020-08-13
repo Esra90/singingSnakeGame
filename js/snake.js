@@ -1,4 +1,5 @@
 function Snake() {
+
   this.x = 0;
   this.y = 0;
   this.xSpeed = scale * 1;
@@ -81,6 +82,9 @@ function Snake() {
         this.y === this.tail[i].y) {
         this.total = 0;
         this.tail = [];
+        gameOver = true;
+        music = new Music();
+        music.clearMusic();
       }
     }
   }

@@ -22,14 +22,32 @@ function Music() {
     
     this.getRandomMusic = function() {
         let randomGetal = Math.floor(Math.random() * (0, 14));
-    
         let track = musicArray[randomGetal];
-        console.log(track);
+    
+         // add samples to carousel 
+        carouselArray.push(track);  
+        console.log(carouselArray); 
+    }
 
-        carouselArray.push(track);
+    this.playAudio = function() { 
+        setInterval(function(){
+            for (let i = 0; i < carouselArray.length; i++){
+                carouselArray[i].play();
+            }
+        },1000);
+    }   
+
+    this.clearMusic = function() {
+        for (let i = 0; i < carouselArray.length; i++){
+            carouselArray[i].pause();
+            carouselArray[i].currentTime = 0;
+        }
+        carouselArray = [];
+        
     }
     
-
 }
 
 
+
+    
