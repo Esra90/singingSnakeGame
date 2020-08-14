@@ -7,7 +7,42 @@ body {
     width: 100%;
 }
 
+
+
 #gameBoard {
+    /* background-image: url("../images/backGround3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
     margin-top: 110px;
-    margin-left: 390px;
+    margin-left: 420px;
 }
+
+#textpart  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:700px; 
+    margin: 0 auto;
+}
+
+
+.game-intro {
+    margin-left: 100px;
+}
+.game-intro h1 {
+    font-size: 25px;
+    font-family: "Verdana";
+    color:black;
+  }
+
+  body button {
+    font-size: 20px;
+    background-color:cornsilk;
+    color: black;
+    padding: 10px 20px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+  }
