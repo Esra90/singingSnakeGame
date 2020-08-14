@@ -1,6 +1,6 @@
 const cvs = document.getElementById("gameBoard");
 const ctx = cvs.getContext("2d");
-const scale = 25;
+const scale = 30;
 const rows = cvs.height / scale;
 const columns = cvs.width / scale;
 let snake;
@@ -37,6 +37,7 @@ var music = new Music();
         document.querySelector('.score').innerText = snake.total;
       }else{
         document.querySelector('.score').innerText = 'GAME OVER';
+        document.querySelector('#start-button').innerText = 'New Game';
         
       }
     }

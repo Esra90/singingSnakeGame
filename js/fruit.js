@@ -16,7 +16,7 @@ function Fruit() {
     // ctx.fillStyle = "#4cafab";
     // ctx.fillRect(this.x, this.y, scale, scale)
     let foodImg = new Image();
-    foodImg.src = './images/musicNote.png';    
+    foodImg.src = './images/musicNote1.png';    
     ctx.drawImage(foodImg, this.x, this.y, scale, scale);  
   }
 
